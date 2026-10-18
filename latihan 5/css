@@ -1,0 +1,290 @@
+{ box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7ed;
+    color: #354332;
+    font-size: 14px;
+}
+
+/* Header */
+header {
+    background-color: #dce7cf;
+    text-align: center;
+    padding: 24px;
+    outline: 2px solid #a8bc95;
+    outline-offset: -7px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #40583b;
+}
+
+header p {
+    margin-bottom: 0;
+    color: #65765c;
+}
+
+/* Navigasi */
+nav {
+    background-color: #f0f0e4;
+    text-align: center;
+    padding: 14px;
+    border-bottom: 1px solid #d4ddca;
+}
+
+nav a {
+    color: #40583b;
+    text-decoration: none;
+    margin: 0 13px;
+}
+
+nav a:hover {
+    color: #8b9d62;
+    text-decoration: underline;
+}
+
+/* Bagian pembuka */
+.pembuka {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding: 35px 7%;
+    background-color: #edf1e5;
+}
+
+.teks-pembuka {
+    flex: 1;
+}
+
+.label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #788b61;
+    font-weight: 600;
+}
+
+.teks-pembuka h2 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 10px 0;
+    color: #3d5638;
+}
+
+.teks-pembuka p {
+    line-height: 1.8;
+}
+
+.pembuka img {
+    width: 42%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.tombol {
+    display: inline-block;
+    background-color: #647d53;
+    color: white;
+    padding: 10px 17px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.tombol:hover {
+    background-color: #40583b;
+}
+
+/* Daftar produk */
+.bagian-menu {
+    padding: 25px 7%;
+}
+
+.judul {
+    margin-bottom: 22px;
+}
+
+.judul h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.judul p {
+    color: #788071;
+}
+
+.daftar-produk {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produk {
+    width: calc(33.333% - 14px);
+    background-color: #fffefa;
+    border: 1px solid #dce2d3;
+    padding: 10px;
+}
+
+.produk img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.isi {
+    padding: 5px 4px;
+}
+
+.isi h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.isi p {
+    color: #727b6b;
+    line-height: 1.7;
+    min-height: 45px;
+}
+
+.isi span {
+    display: block;
+    color: #5c7548;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+}
+
+/* Bagian favorit */
+.favorit {
+    background-color: #e4ebda;
+    margin: 20px 7%;
+    padding: 20px 25px;
+    border-left: 4px solid #81976c;
+}
+
+.favorit h2 {
+    font-size: 21px;
+}
+
+.favorit ul {
+    padding-left: 25px;
+    line-height: 2;
+    list-style-type: square;
+}
+
+/* Tabel harga */
+.bagian-harga {
+    padding: 15px 7% 35px;
+}
+
+.bagian-harga h2 {
+    font-size: 24px;
+}
+
+.bagian-harga p {
+    color: #788071;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffefa;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #d5ddca;
+    text-align: left;
+}
+
+th {
+    background-color: #647d53;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #edf1e7;
+}
+
+tr:hover {
+    background-color: #e2e9d8;
+}
+
+/* Footer */
+footer {
+    background-color: #40583b;
+    color: #f7f7ed;
+    text-align: center;
+    padding: 18px;
+}
+
+footer h3 {
+    font-size: 19px;
+}
+
+footer p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Tampilan HP */
+@media screen and (max-width: 700px) {
+    .pembuka {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+    }
+
+    .pembuka img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .teks-pembuka h2 {
+        font-size: 27px;
+    }
+
+    .bagian-menu {
+        padding: 20px;
+    }
+
+    .produk {
+        width: calc(50% - 10px);
+    }
+
+    .produk img {
+        height: 145px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .favorit {
+        margin: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .produk {
+        width: 100%;
+    }
+
+    .produk img {
+        height: 190px;
+    }
+
+    .bagian-harga {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 480px;
+    }
+}
